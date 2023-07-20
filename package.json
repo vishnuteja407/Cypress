@@ -1,0 +1,23 @@
+{
+  "name": "CDT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "combine:reports": "jrm cypress/results/combined-report.xml \"cypress/results/*.xml\"",
+    "report": "cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=true,json=false --config pageLoadTimeout=100000",
+    "postreport": "npm run combine:reports"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.3.1",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.1.3",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}

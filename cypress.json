@@ -1,0 +1,13 @@
+{
+  "reporter": "mochawesome",
+  "chromeWebSecurity": false,
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "projectId": "rpwxba",
+
+  "pageLoadTimeout": 900000000
+}
